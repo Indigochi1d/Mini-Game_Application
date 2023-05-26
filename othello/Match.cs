@@ -183,46 +183,6 @@ namespace othello
 			}
 		}
 
-		//현재 차례의 플레이어가 착수할 수 있는 자리가 있는지 검사
-		bool CheckPassCondition()
-		{
-			StoneType playerStoneType = turnTable[currentTurn].MyStoneType;
-			foreach (var square in squares)
-			{
-				//현재 스퀘어에 착수시 돌을 1개라도 뒤집을 수 있으면 false 반환
-				if (GetFlippableStones(square.Position, playerStoneType).Any() == true)
-				{
-					return false;
-				}
-			}
-			//뒤집을 돌이 없으면 패스를 위해 true 반환
-			return true;
-		}
-
-		//게임이 종료 조건을 달성했는지 검사
-		bool CheckFinishCondition()
-		{
-			//돌이 하나도 없는 플레이어 탐색
-			foreach (var player in turnTable)
-			{
-				//플레이어의 돌이 하나도 없으면 착수할 수 없으므로 패배
-				if (player.Score == 0)
-				{
-					return true;
-				}
-			}
-			//보드에 착수할 스퀘어가 하나도 없는지 검사
-			foreach (var square in squares)
-			{
-				//착수 가능한 스퀘어가 하나라도 있다면 게임은 안 끝남
-				if (square.Stone == StoneType.None)
-				{
-					return false;
-				}
-			}
-			return true;
-		}
-
 		//점수 레이블 업데이트
 		void UpdateScoreLabels()
 		{
@@ -264,6 +224,46 @@ namespace othello
 
 			//턴을 진행할 수 있는 플레이어의 차례가 올 때까지 패스
 			while (CheckPassCondition()) NextTurn();
+		}
+
+		//현재 차례의 플레이어가 착수할 수 있는 자리가 있는지 검사
+		bool CheckPassCondition()
+		{
+			StoneType playerStoneType = turnTable[currentTurn].MyStoneType;
+			foreach (var square in squares)
+			{
+				//현재 스퀘어에 착수시 돌을 1개라도 뒤집을 수 있으면 false 반환
+				if (GetFlippableStones(square.Position, playerStoneType).Any() == true)
+				{
+					return false;
+				}
+			}
+			//뒤집을 돌이 없으면 패스를 위해 true 반환
+			return true;
+		}
+
+		//게임이 종료 조건을 달성했는지 검사
+		bool CheckFinishCondition()
+		{
+			//돌이 하나도 없는 플레이어 탐색
+			foreach (var player in turnTable)
+			{
+				//플레이어의 돌이 하나도 없으면 착수할 수 없으므로 패배
+				if (player.Score == 0)
+				{
+					return true;
+				}
+			}
+			//보드에 착수할 스퀘어가 하나도 없는지 검사
+			foreach (var square in squares)
+			{
+				//착수 가능한 스퀘어가 하나라도 있다면 게임은 안 끝남
+				if (square.Stone == StoneType.None)
+				{
+					return false;
+				}
+			}
+			return true;
 		}
 	}
 }

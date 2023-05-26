@@ -146,7 +146,7 @@
 			Controls.Add(Board);
 			FormBorderStyle = FormBorderStyle.FixedSingle;
 			Name = "Othello";
-			Text = "Form1";
+			Text = "Othello";
 			ResumeLayout(false);
 		}
 
