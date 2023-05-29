@@ -1,0 +1,17 @@
+C:\Users\qls09\source\repos\오목목목\오목목목\bin\Debug\net6.0-windows\오목목목.exe
+C:\Users\qls09\source\repos\오목목목\오목목목\bin\Debug\net6.0-windows\오목목목.deps.json
+C:\Users\qls09\source\repos\오목목목\오목목목\bin\Debug\net6.0-windows\오목목목.runtimeconfig.json
+C:\Users\qls09\source\repos\오목목목\오목목목\bin\Debug\net6.0-windows\오목목목.dll
+C:\Users\qls09\source\repos\오목목목\오목목목\bin\Debug\net6.0-windows\오목목목.pdb
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.csproj.AssemblyReference.cache
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.Form1.resources
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.csproj.GenerateResource.cache
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.AssemblyInfoInputs.cache
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.AssemblyInfo.cs
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.csproj.CoreCompileInputs.cache
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.dll
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\refint\오목목목.dll
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.pdb
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\오목목목.genruntimeconfig.cache
+C:\Users\qls09\source\repos\오목목목\오목목목\obj\Debug\net6.0-windows\ref\오목목목.dll
