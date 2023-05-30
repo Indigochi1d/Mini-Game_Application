@@ -1,0 +1,17 @@
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.exe.config
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.exe
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.pdb
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Minigames.csproj.AssemblyReference.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Minigames.csproj.SuggestedBindingRedirects.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\MineSweeper.Mine_Setting_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\MineSweeper.MineSweeper.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\오목목목.Omok_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\othello.Othello.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.Select_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.First_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.Properties.Resources.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\sudoku.Sudoku.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Minigames.csproj.GenerateResource.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Minigames.csproj.CoreCompileInputs.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.exe
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.pdb

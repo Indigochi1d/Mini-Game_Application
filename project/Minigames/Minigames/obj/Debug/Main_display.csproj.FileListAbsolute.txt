@@ -1,0 +1,29 @@
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\bin\Debug\Main_display.exe.config
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\bin\Debug\Main_display.exe
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\bin\Debug\Main_display.pdb
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.csproj.AssemblyReference.cache
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.csproj.SuggestedBindingRedirects.cache
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.Form1.resources
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.Form2.resources
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.Properties.Resources.resources
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.csproj.GenerateResource.cache
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.csproj.CoreCompileInputs.cache
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.exe
+C:\Users\82103\Desktop\C# Project\Main_display\Main_display\obj\Debug\Main_display.pdb
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.exe.config
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.exe
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\bin\Debug\Main_display.pdb
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.csproj.AssemblyReference.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.csproj.SuggestedBindingRedirects.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.Properties.Resources.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.csproj.GenerateResource.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.csproj.CoreCompileInputs.cache
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.exe
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.pdb
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.Select_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\Main_display.First_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\오목목목.Omok_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\MineSweeper.Mine_Setting_Form.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\MineSweeper.MineSweeper.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\othello.Othello.resources
+C:\Users\angus\source\repos\First_display\Main_display\Main_display\obj\Debug\sudoku.Sudoku.resources
