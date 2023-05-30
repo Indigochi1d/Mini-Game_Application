@@ -44,12 +44,11 @@ namespace sudoku
                 RestoreDirectory = true
             };
 
-            // If user clicked OK
+            // 유저가 OK 클릭했을때
             if (fileDialog.ShowDialog() == DialogResult.OK)
             {
                 try
                 {
-                    // Reading selected file
                     String[] lines = System.IO.File.ReadAllLines(fileDialog.FileName);
                     // Loading puzzle
                     MainGrid.LoadPuzzle(lines);
@@ -66,8 +65,7 @@ namespace sudoku
         // Game -> Check Solution
         private void msMainMenuGameCheckSolution_Click(object sender, EventArgs e)
         {
-            // TODO check if grid is filled completely
-
+            // 그리드가 완전히 채워졌는지 확인
             if (MainGrid.HasNoConflicts())
                 MessageBox.Show("No conflicts in the grid!", "Information");
             else

@@ -19,30 +19,26 @@ namespace sudoku
             CellSize = cellSize;
             Field = new Label[GridSize, GridSize];
 
-            // Label creation locations
+            //시작 위치 지정
             int horizontal = startX;
             int vertical = startY;
 
-            // Specifies after how many labels we make space
+            
             BoxSize = size / (int)Math.Sqrt(size);
 
-            // Generating field
+            // 스도쿠 필드를 만듬
             for (int i = 0; i < GridSize; i++) {
-
-                // Space between small squares
                 if (i % BoxSize == 0)
                     vertical += 1;
 
-                // Positioning at begining of the row
+                //행의 시작 부분에 배치
                 horizontal = startX;
 
                 for (int j = 0; j < GridSize; j++) {
-
-                    // Space between small squares
                     if (j % BoxSize == 0)
                         horizontal += 1;
 
-                    // Creating new label
+                    //새 라벨을 만들고 필드에 적용
                     Field[i, j] = new Label()
                     {
                         Size = new Size(CellSize, CellSize),
@@ -55,26 +51,21 @@ namespace sudoku
                         Tag = new GridLocation(i, j)
                     };
 
-                    // Adding click event
                     Field[i, j].Click += OnFieldClick;
-
-                    // Adding control to parent form
                     parent.Controls.Add(Field[i, j]);
-
-                    // Moving to next column to draw another button
                     horizontal += cellSize - 1;
                 }
 
-                // Moving to next row
+                //다음 행으로 이동
                 vertical += cellSize - 1;
             }
 
-            // Resizing parent form to fit the new size
+            //새 크기에 맞게 부모 폼 크기 조정
             parent.Size = new Size(horizontal + 2 * startX, vertical + startY + CellSize / 2);
         }
 
 
-        // Helper class, whose instances will hold indexes of corresponding label in Field array
+        // 필드 배열에서 해당 레이블의 인덱스를 인스턴스에 보관하는 것을 도와주는 클래스 GridLocation
         internal class GridLocation
         {
             public readonly int i;
@@ -139,26 +130,23 @@ namespace sudoku
         {
             Label pressedLabel = sender as Label;
 
-            // Empty cells don't have conflicts
+            // 빈 것
             if (pressedLabel.Text == "")
                 return true;
             
-            // Getting indexes of our clicked cell
+            // 칸눌렀을때 그 위치 확인하고 저장
             GridLocation index = (GridLocation)pressedLabel.Tag;
             int x = index.i;
             int y = index.j;
 
-            // Checking row
+            // 행 확인
             for (int i = 0; i < GridSize; i++)
                 if (i != y && Field[x, i].Text == pressedLabel.Text)
                     return false;
-
-            // Checking column
+            // 열 확인
             for (int i = 0; i < GridSize; i++)
                 if (i != x && Field[i, y].Text == pressedLabel.Text)
                     return false;
-
-            // Checking square
             int sqStartX = x - x % BoxSize;
             int sqEndX = sqStartX + BoxSize;
             int sqStartY = y - y % BoxSize;
@@ -193,16 +181,16 @@ namespace sudoku
 
         private void SolveGrid(int row, int col)
         {
-            // If we went outside of grid bounds
+            // 그리드 경계를 벗어나면
             if (row == GridSize) {
                 GridIsSolved = true;
                 return;
             }
 
-            // Next row and column indexes
+            // 다음 row, column의 indexes
             int nextRow, nextCol;
             
-            // Calculating next row and col
+            // 다음 열과 행을 계산
             if (col == GridSize - 1) {
                 nextRow = row + 1;
                 nextCol = 0;
@@ -211,11 +199,11 @@ namespace sudoku
                 nextCol = col + 1;
             }
 
-            // If the current position is already filled, we will skip it
+            // 현재 위치가 차있다면 다음 인덱스로 넘김
             if (Field[row, col].Text != "")
                 SolveGrid(nextRow, nextCol);
             else {
-                // Otherwise we search for a candidate to fit that position
+                // 비어있다면 그 자리에 맞는 숫자후보를 찾음
                 for (int candidate = 1; candidate <= GridSize; candidate++) {
                     // FIXME this is really slow, optimize!
                     Field[row, col].Text = candidate.ToString();
@@ -232,7 +220,7 @@ namespace sudoku
         public void LoadPuzzle(String[] content)
         {
 
-            // For now only supported puzzles to load are 9x9
+            // 9x9 스도쿠 그리드를 생성
 
             try {
                 for (int i = 0; i < GridSize; i++) {
@@ -255,7 +243,7 @@ namespace sudoku
             UpdateFieldColors();
         }
 
-        public void ClearField()
+        public void ClearField()        //clear 동작수행
         {
             foreach (Label cell in Field)
                 if (cell.ForeColor == Color.Black) {
@@ -266,7 +254,7 @@ namespace sudoku
             GridIsSolved = false;
         }
 
-        private void UpdateFieldColors()
+        private void UpdateFieldColors()    // 필드 안에 숫자가 갱신될때 부적절하다면 레드 아니면 평시 유지
         {
             foreach (Label cell in Field) {
                 if (cell.Text == "")
@@ -278,7 +266,7 @@ namespace sudoku
             }
         }
 
-        public void LockField()
+        public void LockField()     //필드 잠금 메소드
         {
             foreach (Label cell in Field) {
                 if (cell.Text != "") {
@@ -291,7 +279,7 @@ namespace sudoku
             }
         }
 
-        public void UnlockField()
+        public void UnlockField()   //필드 잠금 해제 메소드
         {
             foreach (Label cell in Field) {
                 if (cell.Text != "")
