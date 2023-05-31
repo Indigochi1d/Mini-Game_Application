@@ -11,6 +11,7 @@ namespace winnamespace
     public static class winclass
     {
         public static int ruleflag = 0;
+        public static int fiveflag = 0;
         public static int CheckWin(STONE [,] board)
         {
             if (CheckHorizontal(board, STONE.black) || CheckVertical(board, STONE.black) ||
@@ -40,6 +41,14 @@ namespace winnamespace
                         if (count == 5)
                         {
                             ruleflag = 1;
+                            if(rules.rules.OverFive(board, y, x, target))
+                            {
+                                fiveflag = 1;
+                                Console.WriteLine($"win : fiveflag = {fiveflag}");
+                                return false;
+                            }
+
+                            fiveflag = 0;
                             return true;
                         }
                     }
@@ -65,9 +74,16 @@ namespace winnamespace
                         if (count == 5)
                         {
                             ruleflag = 2;
+                            if (rules.rules.OverFive(board, y, x, target))
+                            {
+                                fiveflag = 1;
+                                Console.WriteLine($"win : fiveflag = {fiveflag}");
+                                return false;
+                            }
+                            fiveflag = 0;
                             return true;
                         }
-                        
+
                     }
                     else//target돌 없으면 0이 되므로 연속된 돌 판정 가능
                     {
@@ -102,6 +118,13 @@ namespace winnamespace
                     if (count == 5)
                     {
                         ruleflag = 3;
+                        if (rules.rules.OverFive(board, y, x, target))
+                        {
+                            fiveflag = 1;
+                            Console.WriteLine($"win : fiveflag = {fiveflag}");
+                            return false;
+                        }
+                        fiveflag = 0;
                         return true;
                     }
                 }
@@ -134,6 +157,13 @@ namespace winnamespace
                     if (count == 5)
                     {
                         ruleflag = 4;
+                        if (rules.rules.OverFive(board, y, x, target))
+                        {
+                            fiveflag = 1;
+                            Console.WriteLine($"win : fiveflag = {fiveflag}");
+                            return false;
+                        }
+                        fiveflag = 0;
                         return true;
                     }
                 }

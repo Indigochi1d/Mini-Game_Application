@@ -20,8 +20,6 @@ namespace rules
         {
             if (target == STONE.white)//육목은 흑돌만 금지하므로
                 return false;
-            if (winclass.CheckWin(board) != 1)
-                return false;
             
             int ruleflag = winclass.ruleflag;
             Console.WriteLine(ruleflag);
@@ -57,27 +55,29 @@ namespace rules
 
             else if (ruleflag == 3)//오른쪽 아래 방향 육목 체크
             {
-                if (y > 4 && x > 4)//왼쪽 위 체크
+                if (y > 0 && x > 0)//왼쪽 위 체크
                 {
-                    if (board[y - 5, x - 5] == target)
+                    if (board[y - 1, x - 1] == target)
                         return true;
                 }
-                if (y != 18 && x != 18)//오른쪽 아래 체크
+                if (y < 15 && x < 15)//오른쪽 아래 체크
                 {
-                    if (board[y + 1, x + 1] == target)
+                    if (board[y + 5, x + 5] == target)
+                    {
                         return true;
+                    }
                 }
                 return false;
             }
 
-            else if (ruleflag == 4)//왼쪽 위 방향 육목 체크
+            else if (ruleflag == 4)//왼쪽 아래 방향 육목 체크
             {
-                if (x > 4 && y != 18)//왼쪽 아래 체크
+                if (x > 0 && y != 18)//왼쪽 아래 체크
                 {
                     if (board[y + 1, x - 1] == target)
                         return true;
                 }
-                if (x != 18 && y > 4)//오른쪽 위에 체크
+                if (x < 15 && y > 4)//오른쪽 위에 체크
                 {
                     if (board[y - 5, x + 5] == target)
                         return true;

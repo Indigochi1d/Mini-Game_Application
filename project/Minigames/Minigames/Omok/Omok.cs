@@ -44,6 +44,14 @@ namespace 오목목목
 
             panel1.MouseDown += panel1_MouseDown;//마우스 이벤트 핸들러 등록
 
+            Button button = new Button();
+            button.Text = "다시하기";
+            button.Location = new Point(10, 10);
+            button.BackColor = Color.White;
+
+            button.Click += Button_Click; // 버튼 클릭 이벤트 핸들러 설정
+            panel1.Controls.Add(button);
+
 
         }
 
@@ -65,15 +73,17 @@ namespace 오목목목
                 return;
             Rectangle r = new Rectangle(margin + boardsize * x - stonesize / 2,
                 margin + boardsize * y - stonesize / 2, stonesize, stonesize);
-            
-            if(flag == 0)//검은돌 그리기
+            int result;
+            if (flag == 0)//검은돌 그리기
             {
                 flag = 1;//흰돌 차례로 바꿔주기
                 board[y, x] = STONE.black;
-                if (rules.rules.OverFive(board, y, x, STONE.black))//육목체크
+                result = winclass.CheckWin(board);
+                if (winclass.fiveflag == 1)//육목체크
                 {
                     board[y, x] = STONE.none;
                     MessageBox.Show("육목입니다. 흑돌은 놓을 수 없습니다.");
+                    winclass.fiveflag = 0;//육목 체크했으니까 다시 돌 놓을 수 있게 0으로 바꾸기
                     flag = 0;//아직 못놨으니까 검은돌 차례
                     return;
                 }
@@ -84,8 +94,8 @@ namespace 오목목목
                 g.FillEllipse(wBrush, r);
                 flag = 0;
                 board[y, x] = STONE.white;
+                result = winclass.CheckWin(board);
             }
-            int result = winclass.CheckWin(board);
             if (result == 0)
             {
                 return;
@@ -102,6 +112,10 @@ namespace 오목목목
             }
         }
 
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
 
         void DrawBoard()//기본 바둑판 그리기
         {
@@ -125,7 +139,22 @@ namespace 오목목목
 
         }
 
+        private void Button_Click(object sender, EventArgs e)
+        {
+            g.Clear(panel1.BackColor);
+            DrawBoard();
+            mouseflag = 1;
+            flag = 0;//흑돌이 먼저
+            int i, j;
+            for (i = 0; i < 19; i++)
+            {
+                for (j = 0; j < 19; j++)
+                {
+                    board[i, j] = STONE.none;
+                }
+            }
+        }
 
-        
+
     }
 }
