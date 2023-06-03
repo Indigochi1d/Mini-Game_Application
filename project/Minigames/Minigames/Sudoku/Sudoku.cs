@@ -67,9 +67,9 @@ namespace sudoku
         {
             // 그리드가 완전히 채워졌는지 확인
             if (MainGrid.HasNoConflicts())
-                MessageBox.Show("No conflicts in the grid!", "Information");
+                MessageBox.Show("중복 충돌이 없습니다!", "Information");
             else
-                MessageBox.Show("There are conflicts in the grid!", "Information");
+                MessageBox.Show("중복 충돌이 있습니다!", "Information");
         }
 
         // Game -> Solve
@@ -92,7 +92,7 @@ namespace sudoku
         {
             if (MainGrid.HasNoConflicts() == false)
             {
-                MessageBox.Show("Your grid has conflicts and therefore cannot be locked!", "Error");
+                MessageBox.Show("중복 충돌이 있어 Lock할수 없습니다.", "Error");
                 return;
             }
 

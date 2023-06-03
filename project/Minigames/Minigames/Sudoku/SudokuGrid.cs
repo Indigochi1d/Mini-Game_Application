@@ -176,7 +176,7 @@ namespace sudoku
             if (HasNoConflicts())
                 SolveGrid(0, 0);
             else
-                MessageBox.Show("Grid already has conflicts!", "Error");
+                MessageBox.Show("중복에 의해 충돌이 있습니다.", "Error");
         }
 
         private void SolveGrid(int row, int col)
@@ -217,7 +217,7 @@ namespace sudoku
         }
 
         public void LoadPuzzle(String[] content)
-        {
+        이
 
             // 9x9 스도쿠 그리드를 생성
 
