@@ -205,7 +205,6 @@ namespace sudoku
             else {
                 // 비어있다면 그 자리에 맞는 숫자후보를 찾음
                 for (int candidate = 1; candidate <= GridSize; candidate++) {
-                    // FIXME this is really slow, optimize!
                     Field[row, col].Text = candidate.ToString();
                     if (HasNoConflictsAt(Field[row, col])) {
                         SolveGrid(nextRow, nextCol);
