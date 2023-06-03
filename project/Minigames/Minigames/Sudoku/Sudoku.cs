@@ -32,11 +32,9 @@ namespace sudoku
         // Game -> New -> Load from file
         private void msMainMenuGameNewLoadFromFile_Click(object sender, EventArgs e)
         {
-            // Clearing current field and unlocking
             MainGrid.ClearField();
             msMainMenuFieldUnlock.PerformClick();
 
-            // Creating new FileDialog which will handle file opening
             OpenFileDialog fileDialog = new OpenFileDialog()
             {
                 Title = "Open Text File",
